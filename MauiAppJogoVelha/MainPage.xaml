@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> <!-- Declaração do tipo de documento XML e codificação. --><!-- Define o namespace padrão para o MAUI. --><!-- Define o namespace para as extensões XAML. -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MauiAppJogoVelha.MainPage"> <!-- Define a classe que está associada a esta página. -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0"> <!-- Define um gradiente linear como fundo da página. -->
+            <GradientStop Color="blue" Offset="0.3" /> <!-- Primeiro ponto do gradiente, azul na posição 30%. -->
+            <GradientStop Color="Purple" Offset="1.1" /> <!-- Segundo ponto do gradiente, roxo na posição 110%. -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button"> <!-- Define um estilo para todos os botões na página. -->
+            <Setter Property="BackgroundColor" Value="Transparent" /> <!-- Define a cor de fundo como transparente. -->
+            <Setter Property="CornerRadius" Value="15" /> <!-- Define os cantos do botão com raio de 15 pixels. -->
+            <Setter Property="TextColor" Value="White" /> <!-- Define a cor do texto dos botões como branco. -->
+            <Setter Property="FontSize" Value="80" /> <!-- Define o tamanho da fonte como 80 pixels. -->
+            <Setter Property="BorderWidth" Value="1" /> <!-- Define a largura da borda dos botões como 1 pixel. -->
+            <Setter Property="BorderColor" Value="White" /> <!-- Define a cor da borda como branca. -->
+        </Style>   
+    </ContentPage.Resources>
+<!-- Define três colunas de largura igual. --><!-- Define quatro linhas de altura igual. --><!-- Faz com que o grid preencha verticalmente a área disponível. -->
+    <Grid ColumnDefinitions="*, *, *" 
+          RowDefinitions="*, *, *, *" 
+          VerticalOptions="FillAndExpand" 
+          ColumnSpacing="10" RowSpacing="10" Margin="10" Padding="10"> <!-- Define espaçamento e margens do grid. -->
+<!-- Cria um rótulo que ocupa a primeira linha e as três colunas. --><!-- Define o tamanho da fonte e alinhamento do texto. -->
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                 FontSize="40" HorizontalTextAlignment="Center" 
+                 Text="JOGO DA VELHA" /> <!-- Define o texto do rótulo. -->
+
+        <!-- Criação dos botões do jogo, cada um com um nome único e evento de clique associado. -->
+        <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn12" Grid.Row="1" Grid.Column="2" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn20" Grid.Row="2" Grid.Column="0" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn21" Grid.Row="2" Grid.Column="1" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn22" Grid.Row="2" Grid.Column="2" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn30" Grid.Row="3" Grid.Column="0" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn31" Grid.Row="3" Grid.Column="1" Text="" Clicked="Btn10_Clicked" />
+        <Button x:Name="btn32" Grid.Row="3" Grid.Column="2" Text="" Clicked="Btn10_Clicked" />
+
+    </Grid> <!-- Fechamento do Grid. -->
+
+</ContentPage> <!-- Fechamento da ContentPage. -->
